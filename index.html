@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <style>
+        .flex-tems-order {
+            background-color: DodgerBlue;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 20px auto;
+            height: 300px;
+        }
+       
+      .Mohira {
+        background-color: DodgerBlue;
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        margin: 20px auto;
+        height: 300px;
+      }
+      .Mohira div, .flex-tems-order div {
+        height: 100px;
+        background-color: #f1f1f1;
+        width: 100px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+      .item {
+        order: 1;
+      }
+      .flex-container {
+        background-color: DodgerBlue;
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        margin: 20px auto;
+        height: 200px;
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      h3 {
+        text-align: center;
+        color: red;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>flex-direction: row</h3>
+    <div class="flex-container" style="flex-direction: row">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>flex-direction: row-reverse</h3>
+    <div class="flex-container" style="flex-direction: row-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>flex-direction: column</h3>
+    <div class="flex-container" style="flex-direction: column">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>flex-direction: column-reverse</h3>
+    <div class="flex-container" style="flex-direction: column-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>flex-wrap: nowrap</h3>
+    <div class="flex-container" style="flex-wrap: nowrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h3>flex: wrap</h3>
+    <div class="flex-container" style="flex-wrap: wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>flex: wrap-reverse</h3>
+    <div class="flex-container" style="flex-wrap: wrap-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>flex flow: container</h3>
+    <div class="flex-container" style="flex-flow: column wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>justify-content: flex-start</h3>
+    <div class="flex-container" style="justify-content: flex-start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <h3>justify-content: flex-end</h3>
+    <div class="flex-container" style="justify-content: flex-end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <h3>justify-content: center</h3>
+    <div class="flex-container" style="justify-content: center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <h3>justify-content: space-between</h3>
+    <div class="flex-container" style="justify-content: space-between">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>justify-content: space-around</h3>
+    <div class="flex-container" style="justify-content: space-around">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>justify-content: space-evenly</h3>
+    <div class="flex-container" style="justify-content: space-evenly">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>align-items: stretch</h3>
+    <div class="flex-container" style="align-items: stretch">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-items: flex-start</h3>
+    <div class="flex-container" style="align-items: flex-start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-items: flex-end</h3>
+    <div class="flex-container" style="align-items: flex-end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-items: center</h3>
+    <div class="flex-container" style="align-items: center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-items: baseline</h3>
+    <div class="flex-container" style="align-items: baseline">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-content: flex-start</h3>
+    <div class="flex-container" style="align-content: flex-start">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>align-content: flex-end</h3>
+    <div class="flex-container" style="align-content: flex-end">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>align-content: center</h3>
+    <div class="flex-container" style="align-content: center">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>align-content: stretch</h3>
+    <div class="flex-container" style="align-content: stretch">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+    </div>
+    <h3>align-content: space-between</h3>
+    <div class="flex-container" style="align-content: space-between">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-content: space-around</h3>
+    <div class="Mohira" style="align-content: space-arounde">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h2 align="center">Bola teg hususiyatlari</h2>
+    <h3>order: son</h3>
+    <div class="flex-tems-order" style="align-content: space-arounde">
+      <div style="order: 7;">1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div style="order: -1;">7</div>
+    </div>
+    <h3>flex-grow</h3>
+    <div class="flex-tems-order" style="flex-grow: 4;">
+      <div>1</div>
+      <div style="flex-grow: 4;">4</div>
+      <div>2</div>
+    </div>
+    <h3>flex-shrink</h3>
+    <div class="flex-tems-order" style="flex-grow: 4;">
+      <div>1</div>
+      <div style="flex-shrink: 3;">14</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <h3>flex-basis</h3>
+    <div class="flex-tems-order" style="flex-basis: auto;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div style="flex-basis: auto;">4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+    <h3>align-self</h3>
+    <div class="flex-tems-order" style="align-self: flex-end;">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div style="align-self: flex-end;">4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+  </body>
+</html>
